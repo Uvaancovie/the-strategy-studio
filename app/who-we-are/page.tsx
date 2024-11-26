@@ -22,7 +22,7 @@ const WhoWeAre = () => {
           {/* Infographic 1 */}
           <div className="p-6 bg-white shadow-md rounded-lg text-center">
             <Image
-              src="/images/science-art.png"
+              src="/images/science-art.jpg"
               alt="Science and Art"
               width={100}
               height={100}
@@ -37,7 +37,7 @@ const WhoWeAre = () => {
           {/* Infographic 2 */}
           <div className="p-6 bg-white shadow-md rounded-lg text-center">
             <Image
-              src="/images/personalized.png"
+              src="/images/personalized-coaching.jpg"
               alt="Personalized Coaching"
               width={100}
               height={100}
@@ -52,7 +52,7 @@ const WhoWeAre = () => {
           {/* Infographic 3 */}
           <div className="p-6 bg-white shadow-md rounded-lg text-center">
             <Image
-              src="/images/positive-habits.png"
+              src="/images/positive-habits.jpg"
               alt="Positive Habits"
               width={100}
               height={100}
@@ -67,7 +67,7 @@ const WhoWeAre = () => {
           {/* Infographic 4 */}
           <div className="p-6 bg-white shadow-md rounded-lg text-center">
             <Image
-              src="/images/strategic-management.png"
+              src="/images/strategic-focus-jpg"
               alt="Strategic Focus"
               width={100}
               height={100}
