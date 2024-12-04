@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FaBrain, FaUserTie, FaLightbulb, FaChartLine } from "react-icons/fa";
 
@@ -5,7 +7,7 @@ const WhoWeAre = () => {
   return (
     <main className="bg-gray-50 text-gray-800">
       {/* Hero Section */}
-      <section className="relative bg-blue-600 text-white text-center py-20">
+      <section className="relative bg-blue-600 text-white text-center py-20 md:py-32">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Who We Are</h1>
           <p className="text-lg md:text-xl">
@@ -19,9 +21,9 @@ const WhoWeAre = () => {
         <h2 className="text-4xl font-bold text-center mb-16">Why Choose Salona Singh</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
           {/* Infographic 1 */}
-          <div className="p-8 bg-white shadow-md rounded-lg text-center hover:shadow-lg transition">
+          <div className="p-8 bg-white shadow-md rounded-lg text-center hover:shadow-lg hover:-translate-y-2 transition">
             <div className="text-blue-600 mb-6">
-              <FaBrain className="text-6xl mx-auto" />
+              <FaBrain className="text-6xl md:text-7xl mx-auto hover:scale-110 transition" />
             </div>
             <h3 className="text-2xl font-semibold mb-4">Science & Art</h3>
             <p className="text-lg">
@@ -30,9 +32,9 @@ const WhoWeAre = () => {
           </div>
 
           {/* Infographic 2 */}
-          <div className="p-8 bg-white shadow-md rounded-lg text-center hover:shadow-lg transition">
+          <div className="p-8 bg-white shadow-md rounded-lg text-center hover:shadow-lg hover:-translate-y-2 transition">
             <div className="text-green-600 mb-6">
-              <FaUserTie className="text-6xl mx-auto" />
+              <FaUserTie className="text-6xl md:text-7xl mx-auto hover:scale-110 transition" />
             </div>
             <h3 className="text-2xl font-semibold mb-4">Tailored Coaching</h3>
             <p className="text-lg">
@@ -41,9 +43,9 @@ const WhoWeAre = () => {
           </div>
 
           {/* Infographic 3 */}
-          <div className="p-8 bg-white shadow-md rounded-lg text-center hover:shadow-lg transition">
+          <div className="p-8 bg-white shadow-md rounded-lg text-center hover:shadow-lg hover:-translate-y-2 transition">
             <div className="text-yellow-600 mb-6">
-              <FaLightbulb className="text-6xl mx-auto" />
+              <FaLightbulb className="text-6xl md:text-7xl mx-auto hover:scale-110 transition" />
             </div>
             <h3 className="text-2xl font-semibold mb-4">Building Habits</h3>
             <p className="text-lg">
@@ -52,9 +54,9 @@ const WhoWeAre = () => {
           </div>
 
           {/* Infographic 4 */}
-          <div className="p-8 bg-white shadow-md rounded-lg text-center hover:shadow-lg transition">
+          <div className="p-8 bg-white shadow-md rounded-lg text-center hover:shadow-lg hover:-translate-y-2 transition">
             <div className="text-pink-600 mb-6">
-              <FaChartLine className="text-6xl mx-auto" />
+              <FaChartLine className="text-6xl md:text-7xl mx-auto hover:scale-110 transition" />
             </div>
             <h3 className="text-2xl font-semibold mb-4">Strategic Leadership</h3>
             <p className="text-lg">
@@ -65,13 +67,16 @@ const WhoWeAre = () => {
       </section>
 
       {/* Call-to-Action Section */}
-      <section className="bg-blue-600 text-white text-center py-10">
+      <section className="bg-blue-600 text-white text-center py-10 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">Transform Your Potential Today</h2>
-          <p className="text-lg mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Transform Your Potential Today</h2>
+          <p className="text-lg md:text-xl mb-6">
             Let Salona’s expertise help you unlock your potential and drive meaningful change.
           </p>
-          <button className="px-20 py-6 bg-yellow-500 hover:bg-yellow-600 rounded-md text-lg font-semibold">
+          <button
+            onClick={() => window.location.href = "/contact"}
+            className="px-16 py-4 bg-yellow-500 hover:bg-yellow-600 rounded-md text-lg font-semibold transition transform hover:scale-105"
+          >
             Contact Us
           </button>
         </div>
