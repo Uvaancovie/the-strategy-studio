@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FaBriefcase, FaUserTie, FaUsers } from "react-icons/fa";
 
 const ServicesSection = () => {
@@ -7,22 +6,19 @@ const ServicesSection = () => {
       title: "Strategic Consulting",
       description:
         "Transform your business with proven strategies designed to optimize operations and drive growth.",
-      image: "/images/strategic-consulting.jpg",
-      icon: <FaBriefcase className="text-5xl text-primary-green" />,
+      icon: <FaBriefcase className="text-6xl text-primary-green" />,
     },
     {
       title: "Executive Coaching",
       description:
         "Empower leaders to unlock their full potential through personalized coaching and leadership development.",
-      image: "/images/coaching-finance.jpg",
-      icon: <FaUserTie className="text-5xl text-primary-turquoise" />,
+      icon: <FaUserTie className="text-6xl text-primary-turquoise" />,
     },
     {
       title: "Team Development",
       description:
         "Build high-performing teams, streamline operations, and enhance collaboration for sustainable success.",
-      image: "/images/team-development.jpg",
-      icon: <FaUsers className="text-5xl text-primary-yellow" />,
+      icon: <FaUsers className="text-6xl text-primary-yellow" />,
     },
   ];
 
@@ -44,21 +40,13 @@ const ServicesSection = () => {
               key={index}
               className="relative bg-white rounded-lg shadow-lg hover:shadow-xl transition overflow-hidden"
             >
-              {/* Image Section */}
-              <div className="relative h-48">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-t-lg"
-                />
+              {/* Icon Section */}
+              <div className="flex justify-center items-center bg-gray-200 h-48">
+                {service.icon}
               </div>
 
               {/* Content Section */}
               <div className="p-8">
-                {/* Icon */}
-                <div className="flex justify-center mb-4">{service.icon}</div>
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
                 {/* Description */}
