@@ -6,7 +6,7 @@ import BenefitsCarousel from '@/components/BenefitsCarousel'
 import FAQSection from '@/components/FAQSection'
 import ProcessSection from '@/components/ProcessSection'
 import CallToAction from '@/components/CallToAction'
-
+import ContactSection from '@/components/ContactSection'
 
 const Home = () => {
   return (
@@ -17,6 +17,7 @@ const Home = () => {
       <BenefitsCarousel />
       <FAQSection />
       <ProcessSection/>
+      <ContactSection/>
       <CallToAction/>
     </div>
   )
