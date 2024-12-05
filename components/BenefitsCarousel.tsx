@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import growthAnimation from "../public/lottie/boost.json";
 import leadersAnimation from "../public/lottie/leaders.json";
 import teamDevelopmentAnimation from "../public/lottie/growth.json";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const benefits = [
   {
@@ -43,45 +45,24 @@ const BenefitsCarousel = () => {
   return (
     <section className="py-20 bg-blue-50">
       <div className="container mx-auto px-4 text-center">
-        {/* Section Header */}
         <h2 className="text-4xl font-bold text-blue-600 mb-10">Why Choose Us?</h2>
-
-        {/* Carousel */}
         <div className="relative flex justify-center items-center">
-          {/* Previous Button */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-0 text-blue-500 hover:text-blue-700 p-4"
-          >
+          <button onClick={handlePrev} className="absolute left-0 text-blue-500 hover:text-blue-700 p-4">
             <FaArrowLeft size={36} />
           </button>
-
-          {/* Carousel Item */}
           <div className="w-full max-w-3xl bg-white rounded-lg shadow-lg p-12 mx-4">
             <div className="flex flex-col items-center space-y-8">
-              {/* Animation */}
               <div className="w-80 h-80">
                 <Lottie animationData={benefits[currentIndex].animation} loop autoplay />
               </div>
-              {/* Title */}
-              <h3 className="text-3xl font-bold text-gray-800">
-                {benefits[currentIndex].title}
-              </h3>
-              {/* Description */}
+              <h3 className="text-3xl font-bold text-gray-800">{benefits[currentIndex].title}</h3>
               <p className="text-lg text-gray-600">{benefits[currentIndex].description}</p>
             </div>
           </div>
-
-          {/* Next Button */}
-          <button
-            onClick={handleNext}
-            className="absolute right-0 text-blue-500 hover:text-blue-700 p-4"
-          >
+          <button onClick={handleNext} className="absolute right-0 text-blue-500 hover:text-blue-700 p-4">
             <FaArrowRight size={36} />
           </button>
         </div>
-
-        {/* Carousel Indicators */}
         <div className="mt-8 flex justify-center space-x-4">
           {benefits.map((_, index) => (
             <div

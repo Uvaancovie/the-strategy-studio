@@ -1,28 +1,27 @@
 'use client';
 
-import Player from "lottie-react";
+import dynamic from "next/dynamic";
 import consultingAnimation from "../public/lottie/consulting.json";
 import coachingAnimation from "../public/lottie/coaching.json";
 import teamDevelopmentAnimation from "../public/lottie/team-development.json";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Strategic Consulting",
-      description:
-        "Transform your business with proven strategies designed to optimize operations and drive growth.",
+      description: "Transform your business with proven strategies designed to optimize operations and drive growth.",
       animation: consultingAnimation,
     },
     {
       title: "Executive Coaching",
-      description:
-        "Empower leaders to unlock their full potential through personalized coaching and leadership development.",
+      description: "Empower leaders to unlock their full potential through personalized coaching and leadership development.",
       animation: coachingAnimation,
     },
     {
       title: "Team Development",
-      description:
-        "Build high-performing teams, streamline operations, and enhance collaboration for sustainable success.",
+      description: "Build high-performing teams, streamline operations, and enhance collaboration for sustainable success.",
       animation: teamDevelopmentAnimation,
     },
   ];
@@ -33,17 +32,9 @@ const ServicesSection = () => {
         <h2 className="text-4xl font-bold text-blue-600 mb-4">What We Do</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="relative bg-white rounded-lg shadow-lg hover:shadow-xl transition overflow-hidden"
-            >
+            <div key={index} className="relative bg-white rounded-lg shadow-lg hover:shadow-xl transition overflow-hidden">
               <div className="flex justify-center items-center h-48">
-                <Player
-                  animationData={service.animation}
-                  autoplay
-                  loop
-                  className="w-48 h-48"
-                />
+                <Lottie animationData={service.animation} autoplay loop className="w-48 h-48" />
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
